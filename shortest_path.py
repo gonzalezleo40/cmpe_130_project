@@ -67,7 +67,7 @@ def shortest_path(graph, origin, destination):
 if __name__ == '__main__':
    graph = Graph()
 
-   for node in ['San Jose', 'Milpitas', 'Mountain View', 'Fremont', 'Palo Alto', 'Hayward', 'South San Francisco']:
+   for node in ['San Jose', 'Cambell', 'Mountain View', 'Fremont', 'Palo Alto', 'Hayward', 'South San Francisco']:
        graph.add_node(node)
        
 

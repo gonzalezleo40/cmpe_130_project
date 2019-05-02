@@ -71,7 +71,8 @@ if __name__ == '__main__':
        graph.add_node(node)
        
 
-
+var=1
+while var==1:
    user=input('where would you like to go?') 
    user1= input('Will you be driving, taking the bus or train?')
 

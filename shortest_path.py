@@ -52,11 +52,11 @@ def dijkstra(graph, initial):
 def shortest_path(graph, origin, destination):
    visited, paths = dijkstra(graph, origin)
    full_path = deque()
-   _destination = paths[destination]
+   destination_ = paths[destination]
 
-   while _destination != origin:
-       full_path.appendleft(_destination)
-       _destination = paths[_destination]
+   while destination_ != origin:
+       full_path.appendleft(destination_ )
+       destination_  = paths[destination_ ]
 
    full_path.appendleft(origin)
    

@@ -67,8 +67,9 @@ def shortest_path(graph, origin, destination):
 if __name__ == '__main__':
    graph = Graph()
 
-   for node in ['A', 'B', 'C', 'D', 'E', 'F', 'G']:
+   for node in ['San Jose', 'Milpitas', 'Mountain View', 'Fremont', 'Palo Alto', 'Hayward', 'South San Francisco']:
        graph.add_node(node)
+  
 
    graph.add_edge('A', 'B', 10)
    graph.add_edge('A', 'C', 20)
@@ -81,6 +82,8 @@ if __name__ == '__main__':
 
    user=input('where would you like to go?') 
    user= input('Will you be driving, taking the bus or train?')
+   if()
+   
 
    print(shortest_path(graph, 'A', user))
 

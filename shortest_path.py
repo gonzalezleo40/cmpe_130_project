@@ -69,23 +69,36 @@ if __name__ == '__main__':
 
    for node in ['San Jose', 'Milpitas', 'Mountain View', 'Fremont', 'Palo Alto', 'Hayward', 'South San Francisco']:
        graph.add_node(node)
-  
+       
 
-   graph.add_edge('A', 'B', 10)
-   graph.add_edge('A', 'C', 20)
-   graph.add_edge('B', 'D', 15)
-   graph.add_edge('C', 'D', 30)
-   graph.add_edge('B', 'E', 50)
-   graph.add_edge('D', 'E', 30)
-   graph.add_edge('E', 'F', 5)
-   graph.add_edge('F', 'G', 2)
 
    user=input('where would you like to go?') 
-   user= input('Will you be driving, taking the bus or train?')
-   if()
-   
+   user1= input('Will you be driving, taking the bus or train?')
 
-   print(shortest_path(graph, 'A', user))
+   if user1=='driving':
+    graph.add_edge('San Jose', 'Milpitas', 10)
+    graph.add_edge('San Jose', 'Mountain View', 20)
+    graph.add_edge('Milpitas', 'Fremont', 15)
+    graph.add_edge('Mountain View', 'Fremont', 30)
+    graph.add_edge('Milpitas', 'Palo Alto', 50)
+    graph.add_edge('Fremont', 'Palo Alto', 30)
+    graph.add_edge('Palo Alto', 'Hayward', 5)
+    graph.add_edge('Hayward', 'South SF', 2)
+
+    print(shortest_path(graph, 'San Jose', user))
+
+   elif user1=='bus':
+        graph.add_edge('San Jose', 'Milpitas', 10)
+        graph.add_edge('San Jose', 'Mountain View', 20)
+        graph.add_edge('Milpitas', 'Fremont', 15)
+        graph.add_edge('Mountain View', 'Fremont', 30)
+        graph.add_edge('Milpitas', 'Palo Alto', 60)
+        graph.add_edge('Fremont', 'Palo Alto', 40)
+        graph.add_edge('Palo Alto', 'Hayward', 5)
+        graph.add_edge('Hayward', 'South SF', 2)
+
+        print(shortest_path(graph, 'San Jose', user))
+
 
 
     

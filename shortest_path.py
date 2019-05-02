@@ -59,6 +59,7 @@ def shortest_path(graph, origin, destination):
        _destination = paths[_destination]
 
    full_path.appendleft(origin)
+   
    full_path.append(destination)
 
    return visited[destination], list(full_path)
@@ -78,7 +79,8 @@ if __name__ == '__main__':
    graph.add_edge('E', 'F', 5)
    graph.add_edge('F', 'G', 2)
 
-   user=input('where would you like to go?')
+   user=input('where would you like to go?') 
+   user= input('Will you be driving, taking the bus or train?')
 
    print(shortest_path(graph, 'A', user))
 

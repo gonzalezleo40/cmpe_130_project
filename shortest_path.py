@@ -74,7 +74,7 @@ if __name__ == '__main__':
 
 var = 1
 while var == 1:
-    print('Where would you like to go?\n1: Milpitas\n2: Mountain View\n3: Fremont\n4: Palo Alto\n5: Hayward\n')
+    print('Where would you like to go?\n1: Milpitas\n2: Mountain View\n3: Fremont\n4: Palo Alto\n5: Hayward')
     user = input('6: South SF\nDestination: ')
     try:
         if int(user[0]) < 1 or int(user[0]) > 6:

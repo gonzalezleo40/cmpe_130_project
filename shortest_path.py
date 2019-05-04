@@ -118,9 +118,10 @@ while var == 1:
         graph.add_edge('Hayward', 'South SF', 2)
 
     else:
-        print('That is not a valid input')
+        print('That is not a valid transport type')
         continue
     try:
         print(shortest_path(graph, 'San Jose', nodelist[int(user[0])]))
     except:
         print(shortest_path(graph, 'San Jose', user))
+    input()

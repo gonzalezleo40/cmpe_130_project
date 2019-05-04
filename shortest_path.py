@@ -67,7 +67,8 @@ def shortest_path(graph, origin, destination):
 if __name__ == '__main__':
    graph = Graph()
 
-   for node in ['San Jose', 'Milpitas', 'Mountain View', 'Fremont', 'Palo Alto', 'Hayward', 'South SF']:
+   nodelist = ['San Jose', 'Milpitas', 'Mountain View', 'Fremont', 'Palo Alto', 'Hayward', 'South SF']
+   for node in nodelist:
        graph.add_node(node)
        
 
@@ -112,7 +113,12 @@ while var==1:
    else:
        print('That is not a valid input')
        continue
-
-   print(shortest_path(graph, 'San Jose', user))
+   try:
+       if int(user[0]) > 0 and int(user[0]) < 7:
+           print(shortest_path(graph, 'San Jose', nodelist[int(user[0])]))
+       else:
+           print('That is not a valid destination')
+   except:
+       print(shortest_path(graph, 'San Jose', user))
 
 

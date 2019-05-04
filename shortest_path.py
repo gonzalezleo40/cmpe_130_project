@@ -74,9 +74,9 @@ if __name__ == '__main__':
 var=1
 while var==1:
    user=input('Where would you like to go?\n1: Milpitas\n2: Mountain View\n3: Fremont\n4: Palo Alto\n5: Hayward\n6: South SF\nDestination: ')
-   user1= input('Will you be driving, taking the bus or the train?\n')
+   user1= input('Will you be [D]riving, taking the [B]us or the [T]rain?\n')
 
-   if user1=='driving':
+   if user1[0] in {'d', 'D'}:
     graph.add_edge('San Jose', 'Milpitas', 10)
     graph.add_edge('San Jose', 'Mountain View', 20)
     graph.add_edge('Milpitas', 'Fremont', 15)
@@ -88,7 +88,7 @@ while var==1:
 
     #print(shortest_path(graph, 'San Jose', user))
 
-   elif user1=='bus':
+   elif user1[0] in {'b', 'B'}:
         graph.add_edge('San Jose', 'Milpitas', 10)
         graph.add_edge('San Jose', 'Mountain View', 20)
         graph.add_edge('Milpitas', 'Fremont', 15)
@@ -99,7 +99,7 @@ while var==1:
         graph.add_edge('Hayward', 'South SF', 2)
 
         #print(shortest_path(graph, 'San Jose', user))
-   elif user1=='train':
+   elif user1[0] in {'t', 'T'}:
         graph.add_edge('San Jose', 'Milpitas', 10)
         graph.add_edge('San Jose', 'Mountain View', 20)
         graph.add_edge('Milpitas', 'Fremont', 15)

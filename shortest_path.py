@@ -15,6 +15,12 @@ class Graph(object):
         self.edges[to_node].append(from_node)
         self.distances[(from_node, to_node)] = distance
 
+#function implementing Dijkstra algorithm using a single source node
+#calling variable visited to the initial source node equal to 0
+#line-27 sets up path as an empty dictionary for the shortest path
+#line-29 nodes variable sets() up a pytjon set and returns it
+#if statements inside a while loop will run setting up node to min_node
+#by comparing the visited nodes' to the already visited current min_node and return the min_node
 
 def dijkstra(graph, initial):
     visited = {initial: 0}

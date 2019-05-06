@@ -69,7 +69,7 @@ def shortest_path(graph, origin, destination):
 
     return visited[destination], list(full_path)
 
-
+########## Main Program ##########
 if __name__ == '__main__':
     graph = Graph()
 

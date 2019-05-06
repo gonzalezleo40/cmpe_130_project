@@ -102,6 +102,7 @@ while var == 1:
         graph.add_edge('Fremont', 'Palo Alto', 25)
         graph.add_edge('Palo Alto', 'Hayward', 40)
         graph.add_edge('Hayward', 'South SF', 33)
+        graph.add_edge('Palo Alto', 'South SF', 26)
 
     elif user1[0] in {'b', 'B'}:
         graph.add_edge('San Jose', 'Milpitas', 23)
@@ -112,6 +113,7 @@ while var == 1:
         graph.add_edge('Fremont', 'Palo Alto', 180)
         graph.add_edge('Palo Alto', 'Hayward', 240)
         graph.add_edge('Hayward', 'South SF', 152)
+        graph.add_edge('Palo Alto', 'South SF', 96)
 
     elif user1[0] in {'t', 'T'}:
         graph.add_edge('San Jose', 'Milpitas', 42)
@@ -122,6 +124,7 @@ while var == 1:
         graph.add_edge('Fremont', 'Palo Alto', 67)
         graph.add_edge('Palo Alto', 'Hayward', 110)
         graph.add_edge('Hayward', 'South SF', 71)
+        graph.add_edge('Palo Alto', 'South SF', 44)
 
     else:
         print('That is not a valid transport type')

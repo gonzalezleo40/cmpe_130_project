@@ -131,9 +131,11 @@ while var == 1:
         print('That is not a valid transport type')
         continue
     try:
+        print("The quickest route: ")
         print(shortest_path(graph, 'San Jose', nodelist[int(user[0])]))
         print("--- Running Time %s seconds ---" % (time.time() - start_time))
     except:
+        print("The shortest route: ")
         print(shortest_path(graph, 'San Jose', user))
         print("--- Running TIme %s seconds ---" % (time.time() - start_time))
     input()

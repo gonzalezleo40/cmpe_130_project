@@ -128,12 +128,12 @@ while var == 1:
         graph.add_edge('Palo Alto', 'South SF', 44)
 
     else:
-        print('That is not a valid transport mode')
+        print('That is not a valid transport type')
         continue
     try:
         print(shortest_path(graph, 'San Jose', nodelist[int(user[0])]))
-        print("--- %s seconds ---" % (time.time() - start_time))
+        print("--- Running Time %s seconds ---" % (time.time() - start_time))
     except:
         print(shortest_path(graph, 'San Jose', user))
-        print("--- %s seconds ---" % (time.time() - start_time))
+        print("--- Running TIme %s seconds ---" % (time.time() - start_time))
     input()

@@ -80,7 +80,6 @@ if __name__ == '__main__':
 
 var = 1
 while var == 1:
-    start_time = time.time()
     print('Where would you like to go?\n1: Milpitas\n2: Mountain View\n3: Fremont\n4: Palo Alto\n5: Hayward')
     user = input('6: South SF\nDestination: ')
     try:
@@ -130,12 +129,12 @@ while var == 1:
     else:
         print('That is not a valid transport type\n')
         continue
+
+    start_time = time.time()
+    print("The quickest route: ")
     try:
-        print("The quickest route: ")
         print(shortest_path(graph, 'San Jose', nodelist[int(user[0])]))
-        print("--- Running Time %s milliseconds ---" % (time.time() - start_time))
     except:
-        print("The quickest route: ")
         print(shortest_path(graph, 'San Jose', user))
-        print("--- Running Time %s milliseconds ---" % (time.time() - start_time))
+    print("--- Running Time %s seconds ---" % (time.time() - start_time))
     input()

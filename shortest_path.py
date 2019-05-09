@@ -1,5 +1,5 @@
 from collections import defaultdict, deque
-
+import time
 
 class Graph(object):
     def __init__(self):
@@ -80,6 +80,7 @@ if __name__ == '__main__':
 
 var = 1
 while var == 1:
+    start_time = time.time()
     print('Where would you like to go?\n1: Milpitas\n2: Mountain View\n3: Fremont\n4: Palo Alto\n5: Hayward')
     user = input('6: South SF\nDestination: ')
     try:
@@ -127,10 +128,12 @@ while var == 1:
         graph.add_edge('Palo Alto', 'South SF', 44)
 
     else:
-        print('That is not a valid transport type')
+        print('That is not a valid transport mode')
         continue
     try:
         print(shortest_path(graph, 'San Jose', nodelist[int(user[0])]))
+        print("--- %s seconds ---" % (time.time() - start_time))
     except:
         print(shortest_path(graph, 'San Jose', user))
+        print("--- %s seconds ---" % (time.time() - start_time))
     input()

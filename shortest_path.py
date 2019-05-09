@@ -136,5 +136,5 @@ while var == 1:
         print(shortest_path(graph, 'San Jose', nodelist[int(user[0])]))
     except:
         print(shortest_path(graph, 'San Jose', user))
-    print("--- Running Time %s milliseconds ---" % (time.time() - start_time)*1000)
+    print("--- Running Time %s milliseconds ---" % (10*time.time() - 10*start_time))
     input()

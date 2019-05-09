@@ -133,9 +133,9 @@ while var == 1:
     try:
         print("The quickest route: ")
         print(shortest_path(graph, 'San Jose', nodelist[int(user[0])]))
-        print("--- Running Time %s seconds ---" % (time.time() - start_time))
+        print("--- Running Time %s milliseconds ---" % (time.time() - start_time))
     except:
         print("The quickest route: ")
         print(shortest_path(graph, 'San Jose', user))
-        print("--- Running Time %s seconds ---" % (time.time() - start_time))
+        print("--- Running Time %s milliseconds ---" % (time.time() - start_time))
     input()

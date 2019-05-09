@@ -85,11 +85,11 @@ while var == 1:
     user = input('6: South SF\nDestination: ')
     try:
         if int(user[0]) < 1 or int(user[0]) > 6:
-            print('That is not a valid destination')
+            print('That is not a valid destination\n')
             continue
     except:
         if user not in nodelist:
-            print('That is not a valid destination')
+            print('That is not a valid destination\n')
             continue
 
     user1 = input('Will you be [D]riving, taking the [B]us or the [T]rain?\n')
@@ -128,14 +128,14 @@ while var == 1:
         graph.add_edge('Palo Alto', 'South SF', 44)
 
     else:
-        print('That is not a valid transport type')
+        print('That is not a valid transport type\n')
         continue
     try:
         print("The quickest route: ")
         print(shortest_path(graph, 'San Jose', nodelist[int(user[0])]))
         print("--- Running Time %s seconds ---" % (time.time() - start_time))
     except:
-        print("The shortest route: ")
+        print("The quickest route: ")
         print(shortest_path(graph, 'San Jose', user))
-        print("--- Running TIme %s seconds ---" % (time.time() - start_time))
+        print("--- Running Time %s seconds ---" % (time.time() - start_time))
     input()
